@@ -21,4 +21,8 @@ public class RequestController {
     public String details(@RequestParam String name, @RequestParam int age){ //request parameters filters information
         return "Name "+ name +"Age"+ age;
     }
+    @GetMapping("/person")
+    public Person person(){
+        return new Person("donal ", 25);
+    }
 }
